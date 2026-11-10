@@ -1,0 +1,15 @@
+{
+  "name": "github-commit-reviewer-webhook",
+  "description": "Webhook for GitHub Commit Reviewer workflow",
+  "provider": "github",
+  "events": [
+    "pull_request.opened",
+    "pull_request.reopened",
+    "pull_request.synchronize",
+    "push"
+  ],
+  "secret": "generate_a_secure_secret_here",
+  "active": true,
+  "url": "https://your-deployment-url/webhook/github",
+  "content_type": "application/json"
+}

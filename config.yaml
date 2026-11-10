@@ -1,0 +1,53 @@
+# GitHub Commit Reviewer Configuration
+
+# GitHub Configuration
+github:
+  repo_owner: "your_github_username"
+  repo_name: "your_repository_name"
+  base_url: "https://api.github.com"
+  # api_token: "ghp_your_personal_access_token_here"
+
+# Slack Configuration
+slack:
+  base_url: "https://slack.com/api"
+  # bot_token: "xoxb-your-slack-bot-token"
+  # channel: "your-channel-id"
+
+# Analysis Configuration
+analysis:
+  max_file_size_mb: 10
+  max_diff_lines: 1000
+  timeout_seconds: 300
+  check_security: true
+  check_complexity: true
+  check_style: true
+
+# Workflow Configuration
+workflow:
+  name: "github-commit-reviewer"
+  worker_id: "github-commit-reviewer-worker"
+  deployment_name: "github-commit-reviewer-deployment"
+
+# Security Analysis
+security:
+  tools:
+    - bandit
+    - safety
+  severity_levels:
+    - high
+    - medium
+    - low
+
+# Complexity Analysis
+complexity:
+  tools:
+    - radon
+  thresholds:
+    high: 20
+    medium: 10
+
+# Style Analysis
+style:
+  line_length: 88
+  check_trailing_whitespace: true
+  check_todo_comments: true

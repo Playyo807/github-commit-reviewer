@@ -1,0 +1,10 @@
+mistralai-workflows>=1.0.0
+requests>=2.31.0
+pydantic>=2.5.0
+httpx>=0.25.0
+python-dotenv>=1.0.0
+bandit>=1.7.5
+safety>=2.3.5
+radon>=6.0.1
+mccabe>=0.7.0
+astroid>=3.0.0
